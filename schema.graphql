@@ -1,0 +1,62 @@
+type Created @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  payee: Bytes! # address
+  payer: Bytes! # address
+  creator: Bytes! # address
+  data: String! # string
+}
+
+type Accepted @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+}
+
+type Canceled @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+}
+
+type NewSubPayee @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  payee: Bytes! # address
+}
+
+type UpdateExpectedAmount @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  payeeIndex: Int! # uint8
+  deltaAmount: BigInt! # int256
+}
+
+type UpdateBalance @entity {
+  id: ID!
+  requestId: Bytes! # bytes32
+  payeeIndex: Int! # uint8
+  deltaAmount: BigInt! # int256
+}
+
+type NewTrustedContract @entity {
+  id: ID!
+  newContract: Bytes! # address
+}
+
+type RemoveTrustedContract @entity {
+  id: ID!
+  oldContract: Bytes! # address
+}
+
+type Pause @entity {
+  id: ID!
+}
+
+type Unpause @entity {
+  id: ID!
+}
+
+type OwnershipTransferred @entity {
+  id: ID!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+}

@@ -1,0 +1,53 @@
+specVersion: 0.0.1
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Contract
+    network: rinkeby
+    source:
+      address: "0x967c269f373652fc7a4ef70df7781b509fa4f117"
+      abi: Contract
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.2
+      language: wasm/assemblyscript
+      entities:
+        - Created
+        - Accepted
+        - Canceled
+        - NewSubPayee
+        - UpdateExpectedAmount
+        - UpdateBalance
+        - NewTrustedContract
+        - RemoveTrustedContract
+        - Pause
+        - Unpause
+        - OwnershipTransferred
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: Created(indexed bytes32,indexed address,indexed address,address,string)
+          handler: handleCreated
+        - event: Accepted(indexed bytes32)
+          handler: handleAccepted
+        - event: Canceled(indexed bytes32)
+          handler: handleCanceled
+        - event: NewSubPayee(indexed bytes32,indexed address)
+          handler: handleNewSubPayee
+        - event: UpdateExpectedAmount(indexed bytes32,uint8,int256)
+          handler: handleUpdateExpectedAmount
+        - event: UpdateBalance(indexed bytes32,uint8,int256)
+          handler: handleUpdateBalance
+        - event: NewTrustedContract(address)
+          handler: handleNewTrustedContract
+        - event: RemoveTrustedContract(address)
+          handler: handleRemoveTrustedContract
+        - event: Pause()
+          handler: handlePause
+        - event: Unpause()
+          handler: handleUnpause
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+      file: ./src/mapping.ts
