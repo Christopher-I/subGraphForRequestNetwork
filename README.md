@@ -11,7 +11,7 @@ It can also provide user-behaviour information for the electric charging station
 More about the Dapp..
 #PAY WITH CRYTPO APP FOR ELECTRIC CAR CHARGING STATIONS This app is designed allow electric car owners and charging stations 
 keep track of transaction costs over time by using request network smart contract to manage invoicing and the graph protocol 
-to keep track of all invoicing activity such as the number of invoiced created/accepted/created over a certain period of time.
+to keep track of all invoicing activity such as the number of invoices created/accepted/created over a certain period of time.
 
 Please not that Request network smart contract used is a FORK of the original request network code on the rinkeby network, with a minor change to a 
 single line to allows easier access to the smart contract for the sake of demonstration purposes.
