@@ -5,8 +5,7 @@ This subgraph was used in the production of a Dapp for making payments at electr
 You can view the dapp here : https://fervent-swanson-2ad1a3.netlify.com/
 Dapp Repository here: https://github.com/Christopher-I/ElectricChargingStation
 
-The subgraph allows the dapp create a log of all invoicing history that both end users and electric stations can use to keep track of transcations and other purposes such as filing taxes.
-It can also provide user-behaviour information for the electric charging station, such as - Since our last software update, how many invoices have been created and furthermore how many have been accepted? Such information can be used to improve user experience on the electric station platform.
+The subgraph provides the dapp a log of invoicing history that both end users and electric stations can use to keep track of electric purchase transactions which can be used filing taxes for both the user and the electric station owner.
 
 More about the Dapp..
 #PAY WITH CRYTPO APP FOR ELECTRIC CAR CHARGING STATIONS This app is designed allow electric car owners and charging stations 
